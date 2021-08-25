@@ -7,3 +7,11 @@ def recuirsion(n):
     result*=i
   print(result)
  #递归
+ 
+ #列表
+ classmates=['a','b','c']
+ print(classmates[1]) #获取列表第一个元素 
+ print(classmates[-1]) #获取列表最后一个元素
+ print(len(classmates))#获取列表元素个数
+ classmates.insert(1,'d')#第二个位置插入元素
+ classmates.append('d')#在列表末尾添加元素
