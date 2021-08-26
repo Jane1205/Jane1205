@@ -6,7 +6,7 @@ def recuirsion(n):
   for i in range(1,n):
     result*=i
   print(result)
- #递归
+ #递归1
  
  #列表
  classmates=['a','b','c']
@@ -15,3 +15,12 @@ def recuirsion(n):
  print(len(classmates))#获取列表元素个数
  classmates.insert(1,'d')#第二个位置插入元素
  classmates.append('d')#在列表末尾添加元素
+ classmates.pop()#列表末尾减少元素
+ classmates[1]='e'#直接替换元素
+ 
+ #元组，一旦被初始化就不能 被修改,获取元素的方法和list 一样
+ #只有1个元素的tuple定义时必须加一个逗号,，来消除歧义，如tuple1=(1,)
+ tuple1=('a','b',['c','d'])
+ tuple1[2][0]=('x')
+ tuple1[2][1]=('y')
+ print(tuple1)#结果是tuple1=('a','b',['x','y'])
