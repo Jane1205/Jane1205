@@ -24,3 +24,97 @@ def recuirsion(n):
  tuple1[2][0]=('x')
  tuple1[2][1]=('y')
  print(tuple1)#结果是tuple1=('a','b',['x','y'])
+
+#条件判断
+#例1
+age=20
+if age>=18:
+    print('your age is {}'.format(age))
+#例2   
+age = 3
+if age >= 18:
+    print('your age is', age)
+    print('adult')
+else:
+    print('your age is', age)
+    print('teenager')
+#例3    
+    age=5
+if age>=18:
+    print('your age is',age)
+    print('adult')
+elif age>=12:
+    print('your age is', age)
+    print('teenager')
+else:
+    print('kids')
+    
+    
+#循环
+name=(1,2,3,4)
+for name in name:
+    print(name)
+#计算1到1000的和
+sum=0
+for i in range(0,1001):
+    sum+=i
+print(sum)
+#幂次运算
+a=2
+b=5
+c=a**b
+print(c)
+#死循环
+sum = 0
+n = 99
+while n > 0:
+    sum = sum + n
+    n = n - 2
+print(sum)
+#break停止循环
+n=1
+while n<=100:
+    if n>10:
+       break
+    print(n)
+    n+=1
+print('end')
+#continue函数继续运算
+n=0
+while n<100:
+    n+=1
+    if n%2==0:
+        continue
+    print(n)
+    
+#使用dict和set查找
+d={'Michael': 95, 'Bob': 75, 'Tracy': 85}
+score=d['Michael']
+print(score)
+#get()用法，如果key不存在，可以返回None，或者自己指定的value：
+d.get('Thomas', -1)#如果该字符不在d列表中，则默认返回-1
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+d.pop('Michael')
+print(d)#去除某一元素
+
+#set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。
+#要创建一个set，需要提供一个list作为输入集合
+s = set([1, 1, 2, 2, 3, 3])
+>>> s
+{1, 2, 3}
+
+#通过add(key)方法可以添加元素到set中，可以重复添加，但不会有效果：
+s = set([1, 2, 3])
+s.add(5)
+print(s)#结果为{1, 2, 3, 5}
+
+#通过remove(key)方法可以删除元素：
+s = set([1, 2, 3])
+s.add(5)
+s.remove(2)
+print(s)#结果是{1, 3, 5}
+
+#用replace可以替换某元素
+a='thk'
+new=a.replace('t','T')
+print(new)#结果是Thk
