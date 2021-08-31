@@ -30,3 +30,24 @@ False
 >>> isinstance (a,(str,int,list))    # 是元组中的一个返回 True
 True
    
+#计算平方根可以调用math.sqrt()函数：
+import math
+>>> math.sqrt(2)
+1.4142135623730951
+
+#请定义一个函数quadratic(a, b, c)，接收3个参数，返回一元二次方程 ax^2+bx+c=0
+import math
+def quadratic(a, b, c):
+if not isinstance(a,(int,float)) and not isinstance (b,(int,float)) and isinstance(c,(int,float)):
+        raise TypeError('bad operand type')
+    if b**2-4*a*c<0:
+        print('该方程无意义')
+    elif b**2-4*a*c==0:
+       x=-b/(2*a)       
+       print('该方程的解为{}'.format(x))    	
+    else:
+       x1=(-b+math.sqrt(b**2-4*a*c))/(2*a)
+       x2=(-b-math.sqrt(b**2-4*a*c))/(2*a)
+       return x1, x2
+       print('该方程式的解为{},{}'.format(x1,x2))
+print(quadratic(2,3,1))
