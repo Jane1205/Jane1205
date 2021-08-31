@@ -1,2 +1,32 @@
-#求绝对值的函数abs
-print(abs(-20))
+print(abs(-20))#求绝对值的函数abs
+max(1,2)#求最大值
+#int, float, str,bool可转换数据类型
+
+#定义一个函数要使用def语句
+def my_abs(x):
+    if x>=0:
+        return x
+    else:
+        return -x
+print(my_abs(-39))
+
+#空函数---如果想定义一个什么事也不做的空函数，可以用pass语句：pass语句什么都不做，那有什么用？实际上pass可以用来作为占位符，
+比如现在还没想好怎么写函数的代码，就可以先放一个pass，让代码能运行起来。
+def blank():
+    pass
+   
+   
+isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type()。
+isinstance() 与 type() 区别：
+type() 不会认为子类是一种父类类型，不考虑继承关系。
+isinstance() 会认为子类是一种父类类型，考虑继承关系。
+如果要判断两个类型是否相同推荐使用 isinstance()。
+isinstance(object, classinfo)
+>>>a = 2
+>>> isinstance (a,int)
+True
+>>> isinstance (a,str)
+False
+>>> isinstance (a,(str,int,list))    # 是元组中的一个返回 True
+True
+   
