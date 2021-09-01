@@ -1,0 +1,35 @@
+#计算x的n次方
+def power(x,n):
+    s=1
+    while n>0:
+        n=n-1
+        s=s*x
+    return s
+#可以把第二个参数n的默认值设定为2
+#这样，当我们调用power(5)时，相当于调用power(5, 2)
+def power(x,n=2):
+    s=1
+    while n>0:
+        n=n-1
+        s=s*x
+    return s
+但是后续会出问题，每次调用都是在上一次调用基础上
+  >>> add_end()
+['END', 'END']
+>>> add_end()
+['END', 'END', 'END']
+#用None这个不变对象,无论调用多少次，都不会有问题：
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+    
+    
+#求平方和
+def squaresum(nums):
+   sum=0
+   for n in nums:
+       sum=sum+n**2
+   return sum
+print(squaresum([1,2,3]))
