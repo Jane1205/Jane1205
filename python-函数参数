@@ -1,0 +1,23 @@
+def sqsum(nums):
+    s=0
+    for i in nums:
+        s=s+i*i
+    return s
+print(sqsum([1,2,3,4])) #调用的时候，需要先组装出一个list或tuple
+#如果利用可变参数，调用函数的方式可以简化成这样：
+print(sqsum(1,2,4))
+#所以，我们把函数的参数改为可变参数：
+def sqsum(*nums):
+    s=0
+    for i in nums:
+        s=s+i*i
+     return s
+ print(sqsum(1,2,3))
+#nums表示把nums这个list的所有元素作为可变参数传进去。
+>>> nums = [1, 2, 3]
+>>> calc(*nums)
+
+#**extra表示把extra这个dict的所有key-value用关键字参数传入到函数的**kw参数
+>>> extra = {'city': 'Beijing', 'job': 'Engineer'}
+>>> person('Jack', 24, **extra)
+name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
